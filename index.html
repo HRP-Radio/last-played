@@ -15,17 +15,17 @@
       font-family: 'Lexend', sans-serif;
     }
 
-    /* 1. Oberen schwarzen Balken & myTuner-Logo ausblenden */
+    /* Oberen schwarzen Balken & myTuner-Logo ausblenden */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM > a {
       display: none !important;
     }
 
-    /* 2. Play-Buttons bei jedem Titel komplett entfernen */
-    #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM .play-button {
+    /* Play-Buttons bei jedem Titel ausblenden */
+    .play-button {
       display: none !important;
     }
 
-    /* 3. Alle 7 Tage (inkl. Sonntag) nebeneinander auf PC & Handy */
+    /* Alle 7 Tage (inkl. Sonntag) nebeneinander auf PC & Handy */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist-day-selector {
       display: flex !important;
       width: 100% !important;
@@ -45,36 +45,28 @@
       font-family: 'Lexend', sans-serif !important;
     }
 
-    /* 4. Scrollleiste rechts unsichtbar (Scrollen bleibt per Mausrad/Touch aktiv) */
+    /* Scrollleiste rechts unsichtbar (Scrollen bleibt per Mausrad/Touch aktiv) */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs {
       overflow-y: auto !important;
       overflow-x: hidden !important;
       scrollbar-width: none !important;
       -ms-overflow-style: none !important;
       -webkit-overflow-scrolling: touch;
+      min-height: 200px;
     }
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs::-webkit-scrollbar {
       display: none !important;
     }
 
-    /* 5. Schriftart Lexend überall erzwingen */
+    /* Schriftart Lexend überall erzwingen */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM,
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM * {
       font-family: 'Lexend', sans-serif !important;
     }
 
-    /* 6. Handy-Optimierung */
     @media (max-width: 480px) {
       #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist-day-selector .dow {
         font-size: 12px !important;
-      }
-      #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs li > span:first-of-type {
-        width: 48px !important;
-        padding: 6px !important;
-        font-size: 13px !important;
-      }
-      #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs li > span:last-of-type span {
-        font-size: 13px !important;
       }
     }
   </style>
@@ -127,3 +119,4 @@
 
 </body>
 </html>
+
