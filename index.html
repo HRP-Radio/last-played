@@ -12,7 +12,6 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      overflow: hidden !important;
       background: transparent;
       font-family: 'Lexend', sans-serif;
     }
@@ -27,19 +26,10 @@
       display: none !important;
     }
 
-    /* Feste, saubere Gesamthöhe ohne Luft nach unten */
-    #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM {
-      width: 100% !important;
-      height: 727px !important;
-      max-height: 727px !important;
-      margin: 0 !important;
-    }
-
     /* Alle 7 Tage (inkl. Sonntag) nebeneinander auf PC & Handy */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist-day-selector {
       display: flex !important;
       width: 100% !important;
-      height: 35px !important;
       border-top: none !important;
       position: relative !important;
       z-index: 20 !important;
@@ -56,20 +46,17 @@
       font-family: 'Lexend', sans-serif !important;
     }
 
-    /* Songliste exakt 690px hoch ohne sichtbare Scrollleiste */
+    /* Scrollleiste rechts unsichtbar (Scrollen bleibt per Mausrad/Touch aktiv) */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs {
-      height: 690px !important;
-      max-height: 690px !important;
       overflow-y: auto !important;
       overflow-x: hidden !important;
       scrollbar-width: none !important;
       -ms-overflow-style: none !important;
       -webkit-overflow-scrolling: touch;
+      min-height: 400px;
     }
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs::-webkit-scrollbar {
       display: none !important;
-      width: 0 !important;
-      height: 0 !important;
     }
 
     /* Schriftart Lexend überall erzwingen */
@@ -133,3 +120,4 @@
 
 </body>
 </html>
+
