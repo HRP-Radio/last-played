@@ -16,25 +16,16 @@
       font-family: 'Lexend', sans-serif;
     }
 
-    /* myTuner-Logo oben rechts ausblenden */
-    #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM > a[href*="mytuner-radio.com?utm_source=widget"] {
+    /* Kompletten oberen Balken (myTuner-Logo, HRP-Logo & Titel) ausblenden */
+    #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM > a {
       display: none !important;
     }
 
-    /* Dein Logo und Sendername über volle Breite */
-    #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM > a[href*="hard-rock-palace"] {
-      position: relative !important;
-      z-index: 20 !important;
-    }
-    #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM > a[href*="hard-rock-palace"] span {
-      max-width: calc(100% - 95px) !important;
-      font-family: 'Lexend', sans-serif !important;
-    }
-
-    /* Tagesleiste mit Flexbox: Alle 7 Tage (inkl. Sonntag) nebeneinander auf PC & Handy */
+    /* Tagesleiste ganz oben fixieren & alle 7 Tage (inkl. Sonntag) nebeneinander */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist-day-selector {
       display: flex !important;
       width: 100% !important;
+      border-top: none !important;
       position: relative !important;
       z-index: 20 !important;
     }
@@ -46,6 +37,7 @@
       align-items: center;
       justify-content: center;
       padding: 0 !important;
+      font-weight: 600 !important;
       font-family: 'Lexend', sans-serif !important;
     }
 
@@ -56,9 +48,12 @@
       scrollbar-width: none !important;
       -ms-overflow-style: none !important;
       -webkit-overflow-scrolling: touch;
+      max-height: 750px !important;
     }
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs::-webkit-scrollbar {
       display: none !important;
+      width: 0 !important;
+      height: 0 !important;
     }
 
     /* Schriftart Lexend überall erzwingen */
@@ -69,9 +64,6 @@
 
     /* Handy-Optimierung */
     @media (max-width: 480px) {
-      #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pM > a[href*="hard-rock-palace"] span {
-        font-size: 16px !important;
-      }
       #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist-day-selector .dow {
         font-size: 12px !important;
       }
@@ -80,6 +72,14 @@
         width: 30px !important;
         height: 30px !important;
         background-size: 22px !important;
+      }
+      #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs li > span:first-of-type {
+        width: 46px !important;
+        padding: 4px !important;
+        font-size: 12px !important;
+      }
+      #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs li > span:last-of-type span {
+        font-size: 13px !important;
       }
     }
   </style>
@@ -106,7 +106,7 @@
         } else {
             s.onload = function(){ runQueue(); };
         }
-        document.getElementsByTagName('head')[0].appendChild(s);
+        document.getElementsByTagName('head').appendChild(s);
 
         function runQueue() {
             mytuner_scripts["playlist-v1.js_queue"].forEach(function(func) {
