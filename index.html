@@ -40,12 +40,6 @@
       font-family: 'Lexend', sans-serif !important;
     }
 
-    /* Reihenfolge der Titel umkehren: Neueste Songs ganz oben! */
-    div[id^="wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMdow-container-"] {
-      display: flex !important;
-      flex-direction: column-reverse !important;
-    }
-
     /* Scrollleiste rechts unsichtbar (Scrollen bleibt per Mausrad/Touch aktiv) */
     #wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs {
       overflow-y: auto !important;
@@ -124,7 +118,16 @@
         }
     }</script></div>
 
-</body>
-</html>
+<!-- Reihenfolge der Songs sauber umdrehen (neueste Titel ganz oben) -->
+<script>
+  (function() {
+    const playlistContainer = document.getElementById("wqrDuMOfwqUiw5nDoSJDNMOMaMOwKDRlQ3wtwqZ2w4pMplaylist_songs");
+    if (!playlistContainer) return;
+
+    function reverseSongs(container) {
+      if (container.dataset.reversed === "true") return;
+      const items = Array.from(container.querySelectorAll("li"));
+      if (items.length > 1) {
+
 
 
